@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        var scanner = new Scanner(System.in);
+
+        System.out.println("How many liters of fuel were consumed by the car per 100 kilometers?");
+        var rate = scanner.nextDouble();
+
+        while (true) {
+            System.out.println("How far has the car traveled?");
+            var distance = scanner.nextDouble();
+
+            if (distance == 0)
+                break;
+
+            var result = rate * distance / 100;
+            System.out.println("Result = " + result);
+        }
+    }
+}
